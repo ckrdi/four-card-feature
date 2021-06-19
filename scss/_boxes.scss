@@ -1,0 +1,72 @@
+%box {
+  background-color: white;
+  padding: 1.4rem 2rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  box-shadow: 0 0 20px 1px lighten($color: $gray-blue, $amount: 20%);
+
+  @include mq(1024px) {
+    max-width: 320px;
+    margin: 1rem;
+  }
+
+  h3 {
+    color: $dark-blue;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding-bottom: 0.3rem;
+  }
+  p {
+    color: $gray-blue;
+    font-weight: 400;
+    font-size: 0.8rem;
+    text-align: left;
+    padding-right: 2rem;
+    padding-bottom: 2.2rem;
+
+    @include mq(1024px) {
+      padding-right: 1rem;
+    }
+  }
+  .container {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.boxes {
+  display: block;
+  padding-top: 3rem;
+
+  @include mq(1024px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .supervisor {
+    @extend %box;
+    border-top: 3px solid $cyan;
+  }
+
+  .team-builder {
+    @extend %box;
+    border-top: 3px solid $red;
+
+    @include mq(1024px) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .karma {
+    @extend %box;
+    border-top: 3px solid $orange;
+  }
+
+  .calculator {
+    @extend %box;
+    border-top: 3px solid $blue;
+  }
+}

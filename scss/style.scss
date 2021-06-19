@@ -1,0 +1,56 @@
+@import "config";
+@import "boxes";
+
+body {
+  background-color: $light-gray;
+
+  @include mq(1024px) {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.content {
+  padding: 4rem 2rem 2rem 2rem;
+
+  @include mq(1024px) {
+    padding: 0;
+  }
+
+  h1 {
+    color: $dark-blue;
+    font-weight: 200;
+    font-size: 1.6rem;
+    text-align: center;
+
+    @include mq(1024px) {
+      font-size: 2rem;
+    }
+  }
+  h2 {
+    color: $dark-blue;
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 1rem;
+
+    @include mq(1024px) {
+      font-size: 2rem;
+    }
+  }
+
+  .align {
+    display: flex;
+    justify-content: center;
+
+    p {
+      color: $gray-blue;
+      font-weight: 400;
+      font-size: 1rem;
+      text-align: center;
+      max-width: 500px;
+    }
+  }
+}
