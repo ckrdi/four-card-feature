@@ -13,7 +13,7 @@ body {
 }
 
 .content {
-  padding: 4rem 2rem 2rem 2rem;
+  padding: 4rem 2rem 1rem 2rem;
 
   @include mq(1024px) {
     padding: 0;
